@@ -1,0 +1,147 @@
+/* https://www.fontsquirrel.com */
+
+@font-face {                /* Regular = 400 */
+    font-family: 'Roboto';
+    src: url('../fonts/roboto-regular.woff2') format('woff2'),
+         url('../fonts/roboto-regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+  }
+
+* {
+    box-sizing: border-box;
+    outline: none;
+  }
+  
+  *:focus-visible {
+    outline: 0;
+  }
+
+  html {
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    color: #000;
+    background-color: #fff;
+  }
+
+  .container {
+    display: flex;
+    margin: 0;
+    padding: 0;
+  }
+
+  /* Шапка */
+
+.nav {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: #2196f3;
+}
+
+.nav__list {
+    display: flex;
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 60px;
+}
+
+.nav__item {
+    display: block;
+}
+
+.nav__link {
+    display: block;
+    padding: 23px;
+    text-decoration: none;
+    color: #fff;
+    opacity: .7;
+}
+
+.nav__link_active {
+    background-color: #1e88e5;
+    opacity: 1;
+}
+
+/* main */
+
+  .cats {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 53px 45px 0 45px;
+  }
+
+  .cat__box {
+    width: 100%;
+    height: 100%;
+  }
+
+  .cat__box-out {
+    display: flex;
+    width: 20%;
+  }
+
+  .cat__box-in, 
+  .cat__box-in_lake {
+    width: 240px;
+    height: 240px;
+    padding: 15px;
+    margin: 0 auto;
+    position: relative;
+    cursor: pointer;
+  }
+
+  .cat__box-in::after,
+  .cat__box-in_lake::after {
+    content: "";
+    position: absolute;
+    width: 40px;
+    height: 36px;
+    background-color: transparent;
+    background-image: url('../img/heart.svg');
+    background-position: center center;
+    background-size: cover;
+    bottom: 23px;
+    right: 18px;
+    opacity: 0;
+  }
+
+  .cat__box-in:active::after,
+  .cat__box-in_lake::after {
+    background-image: url('../img/heart2.svg');
+  }
+
+  .cat__box-in:hover,
+  .cat__box-in_lake:hover {
+    box-shadow: 0 6px 5px rgba(0, 0, 0, .24), 0 9px 18px rgba(0, 0, 0, .18);
+  }
+
+  .cat__box-in:hover::after,
+  .cat__box-in_lake:hover::after {
+    opacity: 1;
+  }
+
+  .cat__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .btn-box {
+    display: flex;
+    width: 100%;
+    padding-bottom: 30px;
+    padding-top: 48px;
+  }
+
+  .btn {
+      display: block;
+      margin: 0 auto;
+      padding: 3px;
+      background-color: transparent;
+      border: none;
+      cursor: pointer;
+  }
+  
